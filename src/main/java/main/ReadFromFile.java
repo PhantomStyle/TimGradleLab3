@@ -18,22 +18,21 @@ public class ReadFromFile extends Vehicle {
         while (scanner.hasNextLine()) {
             StringTokenizer stringTokenizer = new StringTokenizer(scanner.nextLine(), ";");
             while (stringTokenizer.hasMoreTokens()) {
-                if (stringTokenizer.countTokens() == 6){
-                     switch (stringTokenizer.nextToken()){
-                         case "Car":
-                             Car car1 = new Car(stringTokenizer.nextToken(), stringTokenizer.nextToken(),Double.parseDouble(stringTokenizer.nextToken()),Short.parseShort(stringTokenizer.nextToken()), Integer.parseInt(stringTokenizer.nextToken()));
-                             return car1;
-                         case "Bus":
-                             Bus bus = new Bus(stringTokenizer.nextToken(), stringTokenizer.nextToken(),Double.parseDouble(stringTokenizer.nextToken()),Short.parseShort(stringTokenizer.nextToken()), Integer.parseInt(stringTokenizer.nextToken()));
-                             return bus;
-                         case "Motorcycle":
-                             Motorcycle motorcycle = new Motorcycle(stringTokenizer.nextToken(), stringTokenizer.nextToken(),Double.parseDouble(stringTokenizer.nextToken()),Short.parseShort(stringTokenizer.nextToken()), Integer.parseInt(stringTokenizer.nextToken()));
-                             return motorcycle;
-                         case "Truck":
-                             Truck truck = new Truck(stringTokenizer.nextToken(), stringTokenizer.nextToken(),Double.parseDouble(stringTokenizer.nextToken()),Short.parseShort(stringTokenizer.nextToken()), Integer.parseInt(stringTokenizer.nextToken()));
-                             return truck;
-
-                     }
+                if (stringTokenizer.countTokens() == 6) {
+                    switch (stringTokenizer.nextToken()) {
+                        case "Car":
+                            Vehicle car1 = new Car(stringTokenizer.nextToken(), stringTokenizer.nextToken(), Double.parseDouble(stringTokenizer.nextToken()), Short.parseShort(stringTokenizer.nextToken()), Integer.parseInt(stringTokenizer.nextToken()));
+                            return car1;
+                        case "Bus":
+                            Vehicle bus = new Bus(stringTokenizer.nextToken(), stringTokenizer.nextToken(), Double.parseDouble(stringTokenizer.nextToken()), Short.parseShort(stringTokenizer.nextToken()), Integer.parseInt(stringTokenizer.nextToken()));
+                            return bus;
+                        case "Motorcycle":
+                            Vehicle motorcycle = new Motorcycle(stringTokenizer.nextToken(), stringTokenizer.nextToken(), Double.parseDouble(stringTokenizer.nextToken()), Short.parseShort(stringTokenizer.nextToken()), Integer.parseInt(stringTokenizer.nextToken()));
+                            return motorcycle;
+                        case "Truck":
+                            Vehicle truck = new Truck(stringTokenizer.nextToken(), stringTokenizer.nextToken(), Double.parseDouble(stringTokenizer.nextToken()), Short.parseShort(stringTokenizer.nextToken()), Integer.parseInt(stringTokenizer.nextToken()));
+                            return truck;
+                    }
                 }
             }
         }
